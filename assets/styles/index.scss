@@ -23,6 +23,16 @@ footer {
   }
 }
 
+.title {
+  font-size: 40px;
+  // font-weight: 500;
+}
+
+.author {
+  font-size: 30px;
+  // font-weight: 500;
+}
+
 // header {
 //   align-items: center;
 //   background: #a7c8d4;
@@ -67,6 +77,7 @@ footer {
 .main {
   .heading {
     margin-bottom: 50px;
+    font-weight: 600;
   }
 
   .about {
