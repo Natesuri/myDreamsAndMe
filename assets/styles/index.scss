@@ -1,4 +1,5 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display');
 
 * {
   margin: 0;
@@ -8,7 +9,9 @@
 
 body {
   // background: #507785;
-  background: #ecf0f1;
+  // background: #ecf0f1;
+  background: rgba(236, 240, 241, 1);
+  font-family: 'Playfair Display', serif;
 }
 
 footer {
@@ -20,17 +23,17 @@ footer {
   }
 }
 
-header {
-  align-items: center;
-  background: #a7c8d4;
-  // background-image: url('../../public/images/MY-DREAMS-AND-ME_FRONT COVER 2 WEB.jpg');
-  // background-position: center;
-  // background-size: cover;
-  // color: white;
-  display: flex;
-  flex-flow: column;
-  padding: 50px 0;
-}
+// header {
+//   align-items: center;
+//   background: #a7c8d4;
+//   // background-image: url('../../public/images/MY-DREAMS-AND-ME_FRONT COVER 2 WEB.jpg');
+//   // background-position: center;
+//   // background-size: cover;
+//   // color: white;
+//   display: flex;
+//   flex-flow: column;
+//   padding: 50px 0;
+// }
 
 .sample {
   display: flex;
@@ -54,6 +57,13 @@ header {
   }
 }
 
+.about-actions {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  // margin: 50px 0 auto;
+}
+
 .main {
   .heading {
     margin-bottom: 50px;
@@ -62,22 +72,34 @@ header {
   .about {
     background: url('../../public/images/IMG_0643.jpg');
     background-size: cover;
-    color: #ecf0f1;
+    // color: #ecf0f1;
+    color: #2c3e50;
     display: flex;
-    flex: column;
+    flex-direction: column;
     align-items: center;
-    height: 500px;
+    height: 800px;
+    padding: 40px 0 0 0;
+
+    .transition {
+      height: 100%;
+      width: 100vw;
+      background-image: linear-gradient(rgba(236, 240, 241, 0), rgba(236, 240, 241, 1));
+    }
 
     .about-body {
+      // display: flex;
+      // flex-direction: column;
       border-radius: 10px;
-      background: #507785;
+      // background: #507785;
+      background: rgba(236, 240, 241, 1);
       max-width: 600px;
       margin: 0 auto;
-      padding: 20px;
+      padding: 100px;
       text-align: center;
 
       p {
         text-align: justify;
+        padding: 50px 0;
       }
     }
   }
@@ -152,4 +174,48 @@ header {
       // background: red;
     }
   }
+}
+
+// Scroll arrow copied from here: https://codepen.io/matthewhirsch/pen/qOxmoz
+
+.scroll-down {
+  position: absolute;
+  left: 50%;
+  bottom: 20px;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 13px;
+  height: 13px;
+  border-bottom: 2px solid #000;
+  border-right: 2px solid #000;
+  // z-index: 9;
+  // left: 50%;
+  -webkit-transform: translate(-50%, 0%) rotate(45deg);
+  -moz-transform: translate(-50%, 0%) rotate(45deg);
+  transform: translate(-50%, 0%) rotate(45deg);
+  -webkit-animation: fade_move_down 4s ease-in-out infinite;
+  -moz-animation:    fade_move_down 4s ease-in-out infinite;
+  animation:         fade_move_down 4s ease-in-out infinite;
+}
+
+
+/*animated scroll arrow animation*/
+@-webkit-keyframes fade_move_down {
+  0%   { -webkit-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -webkit-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@-moz-keyframes fade_move_down {
+  0%   { -moz-transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { -moz-transform:translate(0,10px) rotate(45deg); opacity: 0; }
+}
+@keyframes fade_move_down {
+  0%   { transform:translate(0,-10px) rotate(45deg); opacity: 0;  }
+  50%  { opacity: 1;  }
+  100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
