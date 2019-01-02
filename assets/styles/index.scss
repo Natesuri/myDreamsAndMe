@@ -3,6 +3,7 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
 
 $off-white: rgba(236, 240, 241, 1);
+$sample-color: #cabcb9;
 
 * {
   margin: 0;
@@ -57,7 +58,7 @@ body {
     padding: 50px 0;
   }
 
-  a {
+  span {
     text-decoration: none;
     color: #2c3e50;
 
@@ -186,13 +187,22 @@ body {
   // flex-direction: column;
   width: 60%;
   border-radius: 10px;
-  // background: #507785;
-  background: #CABCB9;
+  background: $sample-color;
+  // background: #2c3e50;
   max-width: 800px;
   padding: 40px 60px 80px;
   // text-align: center;
   // justify-content: center;
   // color: #ecf0f1;
+
+  span {
+    text-decoration: none;
+    color: #2c3e50;
+
+    &:hover {
+      color: #3498db;
+    }
+  }
 
   h4 {
     align-self: flex-start;
@@ -245,6 +255,38 @@ footer {
 .follow {
   text-align: right;
   // text-decoration: underline;
+}
+
+.to-top {
+  display: flex;
+  justify-content: center;
+  margin: 10px;
+
+  span {
+    text-decoration: none;
+    color: #2c3e50;
+
+    &:hover {
+      color: #3498db;
+    }
+  }
+}
+
+.modal-dialog {
+  max-width: 800px;
+}
+
+.modal-content {
+  background: $sample-color;
+  border-color: black;
+}
+
+.modal-header {
+  border-color: black;
+}
+
+.modal-footer {
+  border-color: black;
 }
 
 // header {

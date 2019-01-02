@@ -12,9 +12,9 @@
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
     <body>
-    <div class='main'>
+    <div data-scroll-target='top' class='main'>
       <div class='about'>
-        <p class='copyright'>&copy EmilioSCot 2018</p>
+        <p class='copyright'>&copy; EmilioSCot 2018</p>
       <div class='about-body'>
         <!-- <h3>About My Dreams and Me</h3> -->
         <h1 class='title'>My Dreams and Me</h1>
@@ -25,15 +25,15 @@
            velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
            sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
         <div class='about-actions'>
-          <a href='#Endorsements'>Endorsements</a>
-          <a href='#Buy'>Buy Now</a>
-          <a href='#Read'>Read A Sample</a>
+          <div><span data-scroll-to='endorsements'>Endorsements</span></div>
+          <div><span data-scroll-to='buy'>Buy Now</span></div>
+          <div><span data-id='read'>Read A Sample</span></div>
         </div>
       </div>
       <div class='transition'></div>
       </div>
       <div class='double'>
-        <div id='Endorsements' class='endorsements'>
+        <div data-scroll-target='endorsements' class='endorsements'>
           <h4 class='heading'>Endorsements</h4>
           <ul>
             <li>
@@ -63,7 +63,7 @@
           <img src="public/images/MyDreamsAndMe_Cover-TEMP.png" alt="Book Cover">
         </div>
       </div>
-      <div id='Buy' class='single'>
+      <div data-scroll-target='buy' class='single'>
           <div class='single-centered'>
             <h4 class='heading'>Buy Now At</h4>
             <ul>
@@ -83,21 +83,62 @@
           </div>
       </div>
       <div class='single'>
-        <div id='Read' class='sample'>
+        <div class='sample'>
           <h4>Read a Sample</h4>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt
              ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
              laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
              sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <h6 class='more'>Keep Reading...</h6>
+          <div class='more'><span data-id='read'>Keep Reading...</span></div>
         </div>
       </div>
+      <div class='to-top'><span data-scroll-to='top'>Back to Top</span></div>
     </div>
     <footer>
       <div class='contact'><h5>Contact Me</h5> <a class='email' href='mailto:EmilioSCot@gmail.com'>EmilioSCot email</a></div>
        <div class='follow'><h5>Follow Me</h5> <a href='https://www.twitter.com'><i class="fa fa-twitter"></i></a> <a href='https://facebook.com'><i class="fa fa-facebook-square"></i></a> <a href='https://instagram.com'><i class="fa fa-instagram"></i></a></div>
     </footer>
     <div class="scroll-down"></div>
+
+    <div class='modal fade' id='sample-modal'>
+					<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="SampleModalLabel">My Dreams and Me Excerpt</h5>
+							<button type="button" class="close dismiss" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&otimes;</span>
+							</button>
+						</div>
+						<div id='sample-modal-body' class="modal-body">
+              <h6>Chapter 1</h6>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class='w-100'></div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+              <div class='w-100'></div>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              </p>
+						</div>
+						<!-- <div class="modal-footer">
+						<button type="button" class="btn btn-secondary dismiss" data-dismiss="modal">Close</button>
+						</div> -->
+					</div>
+				</div>
+			</div>
     </body>
 </html>

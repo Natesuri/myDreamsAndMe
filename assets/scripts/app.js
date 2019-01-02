@@ -8,5 +8,20 @@
 
 $(() => {
   // your JS code goes here
-  $('a')
+  $('[data-scroll-to]').on('click', function () {
+    console.log($(event.target).data('scroll-to'))
+
+    const scrollTarget = $(event.target).data('scroll-to')
+
+    const scrollTargetTop = $(`[data-scroll-target=${scrollTarget}`).offset().top
+
+    window.scrollTo(0, scrollTargetTop - 50)
+    // console.log('yo, my data-scroll-to is', event)
+  })
+
+  $('[data-id=read]').on('click', function () {
+    console.log('sup')
+
+    $('#sample-modal').modal('show')
+  })
 })
