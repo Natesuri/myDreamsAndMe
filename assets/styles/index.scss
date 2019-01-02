@@ -1,5 +1,8 @@
 @import '~bootstrap/scss/bootstrap';
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+
+$off-white: rgba(236, 240, 241, 1);
 
 * {
   margin: 0;
@@ -7,19 +10,60 @@
   list-style: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   // background: #507785;
   // background: #ecf0f1;
-  background: rgba(236, 240, 241, 1);
+  color: #2c3e50;
+  background: $off-white;
   font-family: 'Playfair Display', serif;
 }
 
-footer {
-  background: black;
-  color: white;
+.about {
+  background: url('../../public/images/IMG_0643.jpg');
+  background-size: cover;
+  // color: #ecf0f1;
+  color: #2c3e50;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // height: 800px;
+  height: 90vh;
+  padding: 40px 0 0 0;
+}
+
+.copyright {
+  align-self: flex-end;
+  margin-right: 100px;
+  color: $off-white;
+}
+
+.about-body {
+  // display: flex;
+  // flex-direction: column;
+  border-radius: 10px;
+  // background: #507785;
+  background: $off-white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 50px 70px 80px;
+  text-align: center;
+
+  p {
+    text-align: justify;
+    padding: 50px 0;
+  }
 
   a {
-    // margin: 0 auto;
+    text-decoration: none;
+    color: #2c3e50;
+
+    &:hover {
+      color: #3498db;
+    }
   }
 }
 
@@ -33,29 +77,121 @@ footer {
   // font-weight: 500;
 }
 
-// header {
-//   align-items: center;
-//   background: #a7c8d4;
-//   // background-image: url('../../public/images/MY-DREAMS-AND-ME_FRONT COVER 2 WEB.jpg');
-//   // background-position: center;
-//   // background-size: cover;
-//   // color: white;
-//   display: flex;
-//   flex-flow: column;
-//   padding: 50px 0;
-// }
+.about-actions {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-around;
+  // margin: 50px 0 auto;
+}
 
-.sample {
+.transition {
+  height: 100%;
+  width: 100vw;
+  background-image: linear-gradient(rgba(236, 240, 241, 0), $off-white);
+}
+
+.main {
+  ul {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    // justify-content: center;
+    justify-content: space-between;
+    // align-content: center;
+
+    li {
+      min-height: 50px;
+      margin: 10px auto;
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+
+.heading {
+  font-size: 25px;
+  margin-bottom: 50px;
+  font-weight: 600;
+}
+
+.double {
+  display: flex;
+  flex-direction: row;
+  margin: 100px;
+  justify-content: space-around;
+}
+
+.single {
+  display: flex;
+  flex-direction: row;
+  margin: 60px;
+  justify-content: center;
+  text-align: center;
+}
+
+.single-centered {
   display: flex;
   flex-direction: column;
+  // background: #CABCB9;
+  // min-height: 600px;
+  width: 60%;
+  max-width: 600px;
+}
+
+.endorsements {
+  display: flex;
+  flex-direction: column;
+  // background: #CABCB9;
+  // min-height: 600px;
   width: 40%;
+  max-width: 600px;
+  // flex-wrap: nowrap;
+  // padding-right: 50px;
+}
+
+.cover {
+  img {
+    max-width: 500px;
+
+    // @media (max-width: 768px) {
+    //   max-width: 200px;
+    // }
+  }
+}
+
+.buy-btn {
+  display: inline-block;
+  padding: 15px;
+  border-radius: 50px;
+  // border-color: #a7c8d4;
+  border: 2px solid #a7c8d4;
+  // background: #a7c8d4;
+  color: #2c3e50;
+  // color: black;
+  text-decoration: none;
+  width: 60%;
+  font-size: 18px;
+
+  &:hover {
+    // color: #a7c8d4;
+    color: #3498db;
+    text-decoration: none;
+  }
+}
+
+.sample {
+  // display: flex;
+  // flex-direction: column;
+  width: 60%;
   border-radius: 10px;
   // background: #507785;
   background: #CABCB9;
-  max-width: 600px;
-  padding: 20px;
-  text-align: center;
-  justify-content: center;
+  max-width: 800px;
+  padding: 40px 60px 80px;
+  // text-align: center;
+  // justify-content: center;
   // color: #ecf0f1;
 
   h4 {
@@ -67,125 +203,61 @@ footer {
   }
 }
 
-.about-actions {
+.more {
+  text-align: left;
+}
+
+footer {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  background: #1b1c1d;
+  color: $off-white;
+  height: 150px;
+  padding: 60px;
+
+  a {
+    font-size: 30px;
+    padding: 0 0 0 20px;
+    color: $off-white;
+
+    &:hover {
+      color: #3498db;
+      text-decoration: none;
+    }
+  }
+}
+
+.email {
   font-size: 20px;
-  justify-content: space-around;
-  // margin: 50px 0 auto;
 }
 
-.main {
-  .heading {
-    margin-bottom: 50px;
-    font-weight: 600;
-  }
-
-  .about {
-    background: url('../../public/images/IMG_0643.jpg');
-    background-size: cover;
-    // color: #ecf0f1;
-    color: #2c3e50;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 800px;
-    padding: 40px 0 0 0;
-
-    .transition {
-      height: 100%;
-      width: 100vw;
-      background-image: linear-gradient(rgba(236, 240, 241, 0), rgba(236, 240, 241, 1));
-    }
-
-    .about-body {
-      // display: flex;
-      // flex-direction: column;
-      border-radius: 10px;
-      // background: #507785;
-      background: rgba(236, 240, 241, 1);
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 100px;
-      text-align: center;
-
-      p {
-        text-align: justify;
-        padding: 50px 0;
-      }
-    }
-  }
-
-  .double {
-    display: flex;
-    flex-direction: row;
-    margin: 100px;
-    justify-content: space-between;
-
-    // .buy {
-    //   width: 40%;
-    // }
-
-    .endorsements {
-      display: flex;
-      flex-direction: column;
-      // background: #CABCB9;
-      // min-height: 600px;
-      width: 40%;
-      max-width: 600px;
-      // flex-wrap: nowrap;
-      // padding-right: 50px;
-
-      .buy-btn {
-        display: inline-block;
-        padding: 15px;
-        border-radius: 10px;
-        background: #a7c8d4;
-        color: black;
-        text-decoration: none;
-        width: 70%;
-        font-size: 14px;
-        // margin: 0 auto;
-        // min-width: 1000px;
-        // flex-wrap: nowrap;
-
-        &:hover {
-          color: red;
-        }
-      }
-
-      ul {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        // justify-content: center;
-        justify-content: space-between;
-        // align-content: center;
-
-        li {
-          min-height: 50px;
-          margin: 10px auto;
-          width: 100%;
-          text-align: center;
-        }
-      }
-    }
-
-    .cover {
-      img {
-        max-width: 500px;
-
-        // @media (max-width: 768px) {
-        //   max-width: 200px;
-        // }
-      }
-      // max-width: 300px;
-      // height: 600px;
-      // background: red;
-    }
+.contact {
+  text-align: left;
+  // text-decoration: underline;
+  a {
+    padding: 0;
   }
 }
+
+.follow {
+  text-align: right;
+  // text-decoration: underline;
+}
+
+// header {
+//   align-items: center;
+//   background: #a7c8d4;
+//   // background-image: url('../../public/images/MY-DREAMS-AND-ME_FRONT COVER 2 WEB.jpg');
+//   // background-position: center;
+//   // background-size: cover;
+//   // color: white;
+//   display: flex;
+//   flex-flow: column;
+//   padding: 50px 0;
+// }
 
 // Scroll arrow copied from here: https://codepen.io/matthewhirsch/pen/qOxmoz
 
