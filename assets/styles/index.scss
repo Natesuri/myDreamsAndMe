@@ -191,10 +191,7 @@ body {
 .cover {
   img {
     max-width: 500px;
-
-    // @media (max-width: 768px) {
-    //   width: 100%;
-    // }
+    width: 100%;
   }
 }
 
@@ -357,4 +354,75 @@ footer {
 
 .modal-footer {
   border-color: black;
+}
+
+@media (max-width: 600px) {
+  .copyright {
+    margin-right: 10px;
+  }
+
+  .double {
+    flex-direction: column;
+    margin: 30px 50px 30px;
+  }
+
+  .about-body {
+    border-bottom: 0.5px solid black;
+    border-radius: 0;
+    padding: 0;
+  }
+
+  .cover {
+    padding-top: 10px;
+  }
+
+  .about-text {
+    h3 {
+      font-size: 22px;
+      // border-bottom: 1px solid black;
+      text-decoration: underline;
+    }
+  }
+
+  .endorsements {
+    width: auto;
+  }
+
+  .heading {
+    margin: 0;
+    text-align: center;
+    text-decoration: underline;
+  }
+
+  .single-centered {
+    width: auto;
+  }
+
+  .single {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .sample {
+    width: auto;
+    padding: 20px 30px 40px;
+  }
+
+  .more {
+    span {
+      border: 1px solid black;
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+
+  footer {
+    padding: 0 30px;
+    height: auto;
+    margin: 10px 0;
+
+    div {
+      width: 50%;
+    }
+  }
 }
