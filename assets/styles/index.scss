@@ -150,6 +150,16 @@ body {
   font-weight: 600;
 }
 
+.heading-top {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.sub-heading {
+  font-size: 25px;
+  font-weight: 400;
+}
+
 .double {
   display: flex;
   flex-direction: row;
@@ -340,6 +350,10 @@ footer {
   h5 {
     font-weight: 500;
     margin-bottom: 20px;
+  }
+
+  span {
+    font-style: italic;
   }
 }
 
