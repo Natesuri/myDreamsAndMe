@@ -390,6 +390,22 @@ footer {
   border-color: black;
 }
 
+.event-item {
+  p {
+    font-size: 1.25rem;
+  }
+
+  // span {
+  //   text-decoration: none;
+  //   color: #007bff;
+  //
+  //   &:hover {
+  //     color: #0056b3;
+  //     text-decoration: underline;
+  //   }
+  // }
+}
+
 @media (max-width: 600px) {
   .copyright {
     margin-right: 10px;

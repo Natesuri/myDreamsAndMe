@@ -21,7 +21,15 @@ $(() => {
     $('#sample-modal').modal('show')
   })
 
+  $('[data-id=event-05-11-19]').on('click', function () {
+    $('#event-modal-05-11-19').modal('show')
+  })
+
   $('[data-id=bn]').on('click', function () {
     $('#bn-modal').modal('show')
   })
+
+  // $('.past-events-carousel').slick({
+  //   setting-name: setting-value
+  // });
 })
