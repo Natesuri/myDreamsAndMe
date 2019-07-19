@@ -225,6 +225,26 @@ body {
   }
 }
 
+.event-showcase {
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.event-photos {
+  img {
+    max-width: 700px;
+    max-height: 700px;
+    margin: 10px;
+  }
+}
+
 .buy-btn {
   display: inline-block;
   padding: 15px;
