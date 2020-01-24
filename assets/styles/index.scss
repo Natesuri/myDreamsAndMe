@@ -350,6 +350,11 @@ footer {
   // text-decoration: underline;
 }
 
+.no-events {
+  font-style: italic;
+  font-size: 18px;
+}
+
 .to-top {
   display: flex;
   justify-content: center;
@@ -427,6 +432,14 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .event-photos {
+    img {
+      max-width: 300px;
+      max-height: 700px;
+      margin: 10px;
+    }
+  }
+
   .copyright {
     margin-right: 10px;
   }
